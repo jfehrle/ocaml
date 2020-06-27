@@ -320,6 +320,8 @@ external huge_fallback_count : unit -> int = "caml_gc_huge_fallback_count"
 (** Return the number of times we tried to map huge pages and had to fall
     back to small pages. This is always 0 if [OCAMLRUNPARAM] contains [H=1].
     @since 4.03.0 *)
+    
+external find_root : int -> int = "caml_gc_find_root"
 
 val finalise : ('a -> unit) -> 'a -> unit
 (** [finalise f v] registers [f] as a finalisation function for [v].

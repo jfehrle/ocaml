@@ -350,6 +350,12 @@ CAMLprim value caml_gc_huge_fallback_count (value v)
   return Val_long (caml_huge_fallback_count);
 }
 
+CAMLprim value caml_gc_find_root (value v)
+{
+  /*printf("Hi mom! %ld\n", v);*/
+  return Val_long (123);
+}
+
 CAMLprim value caml_gc_get(value v)
 {
   CAMLparam0 ();   /* v is ignored */

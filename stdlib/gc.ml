@@ -63,6 +63,7 @@ external get_minor_free : unit -> int = "caml_get_minor_free"
 external get_bucket : int -> int = "caml_get_major_bucket" [@@noalloc]
 external get_credit : unit -> int = "caml_get_major_credit" [@@noalloc]
 external huge_fallback_count : unit -> int = "caml_gc_huge_fallback_count"
+external find_root : int -> int = "caml_gc_find_root" 
 
 open Printf
 
